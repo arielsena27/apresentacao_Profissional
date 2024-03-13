@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');/*importação de fontes do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Seguindo boas praticas, evitei repetir o mesmo codigo ou trecho de codigo varias vezes. Criei a variavel para guardar algumas informalções repetidas que estou utilizando neste projeto da seguinte maneira (pesquisar Variaveis CSS) vv:*/
+:root {
+    --cor-primaria: #2D4356;
+    --cor-secundaria: #EAB2A0;
+    --cor-terciaria: #A78295;
+    --cor-hover: #435B66;/*cor de dentro dos botões na pagina home*/
+    --cor-texto-rodape: #000000;
+
+    --fonte-primaria:"Krona One", sans-serif;
+    --fonte-secundaria:'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { /*corpo da pagina*/
+    /*com a adição do footer(rodapé) não faz mais sentido essa altura da tela, com isso tirei o height*/ 
+    /*height:100vh; == altura da tela = 100% do viewport*/
+    box-sizing: border-box; /*garante que o conteudo dentro da tag pai nao escape para fora.*/
+    background-color: var(--cor-primaria); /*cor de fundo*/
+    color: var(--cor-secundaria) /*cor do texto*/
+}
+/*nota: para utilizar uma classe no CSS, esqueve-se da seguinte forma vv:*/
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem; /*==24px (o 1rem == 16px)*/
+    font-weight: 600;
+    color:var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao { 
+    /*com a retirada do height, alterei a margin para padding*/
+    /*margin: 10% 15%; == coloca margem nos elementos dentro da classe*/
+    padding: 5% 15%;
+    display:flex; /*flexbox: organiza todos os elementos na pagina que estão dentro da classe, neste caso, tudo dentro do main será organizado em forma de linha (row)(pesquisar flexbox)*/
+    align-items: center; /*coloca todos os elementos da classe no centro da pagina de acordo com o maior elemento desta.*/
+    justify-content: space-between; /*coloca um espaçamento entre os elementos da pagina*/
+    gap: 82px; /*para garantir que haja espaço entre o texto e a imagem*/
+
+}
+
+.apresentacao__conteudo {
+    width: 50%; /*615px*/ /*largura do texto || alterando com responsividade*/
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem /*==36px*/; /*tamamho do titulo || Alterado a unidade de medida respeitando a responsividade */
+    font-family: var(--fonte-primaria); /*fonte utilizada no titulo*/
+}
+
+.titulo-destaque { /*cor de destaque do texto, será destacado nessa cor apenas o que estiver nesta classe*/
+    color: var(--cor-terciaria)
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem /*24px*/; 
+    font-family: var(--fonte-secundaria); /*fonte utilizada no texto*/
+}
+
+.apresentacao__links { /*essa função organiza os links do site*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    margin-top: 25px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem /*24px*/;
+}
+
+.apresentacao__links__link {/*estilização dos links*/
+    /*background-color: #22D4FD; tirei a cor do botão e coloquei bordas vv*/
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);/*primeiro valor: espessura da borda*/
+    width: 50%; /*378px || aleterando com responsividade*/
+    text-align: center;
+    border-radius: 8px; /*para deixar a borda arredondada*/
+    font-size: 1.5rem /*24px*/;
+    font-weight: 600; /*espessura da fonte que esta no botão*/
+    padding: 21.5px 0px; /*é possivel adicionar dois valores. O primeiro valor sempre será referente ao eixo vertical, enquanto o segundo sempre será do eixo horizontal*/
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem {
+    width: 40%;
+}
+
+/*footer vv*/
+.rodape {
+    padding: 24px;
+    color: var(--cor-texto-rodape);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem /*24px*/;
+    font-weight: 400;
+}
+
+@media(max-width: 1200px) {/*condição: se o tamanho das tela for menor que 1200px, ajuste os elementos da pagina*/
+    .cabecalho {
+        padding:10% ;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+    
+}

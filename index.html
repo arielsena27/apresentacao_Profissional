@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!--seleção de idioma-->
+<head>
+    <meta charset="UTF-8"> <!--codificação dos caracteres-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Configuração para usar a versão mais recente do navegador-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--escala que relaciona a pagina com o dispositivo que vai acessar a pagina-->
+    <title>Home</title> <!--nome da aba-->
+    <link rel="stylesheet" href="./styles/styles.css"> <!--serve para importar o arquivo do css e implementa-lo na pagina-->
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+        </nav>
+    </header>
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo"> <!--cria uma seção para separar elementos de uma pagina. Neste caso, separei os elementos textuais das imagens
+        -->
+            <h1 class="apresentacao__conteudo__titulo"> <!-- titulo 1-->
+                Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Front-end de qualidade!</strong><!--destaca o texto selecionado-->
+            </h1>
+            <p class="apresentacao__conteudo__texto"><!--paragrafo-->
+                Olá! Sou Ariel Sena, desenvolvedora FullStack com especialidade em Node.JS, Express.JS, JavaScript, HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?
+            </p>
+            <div class="apresentacao__links"> <!--apenas para efeito visual, serve para agrupar elementos para fins de estilo. Não tem função pratica.-->
+                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes:</h2>
+                <a class="apresentacao__links__link" href="https://github.com/arielsena27" target="_blank"> <!--texto que te redireciona para o link citado-->
+                    <img src="./assets/git64.png" alt="git64" height="38" width="38" >
+                    GitHub
+                </a>
+                <a class="apresentacao__links__link" href="https://www.linkedin.com/in/ariel-sena-souza-91b130125/" target="_blank">
+                    <img src="./assets/linkedin64.png" alt="linkedin64" height="38" width="38">
+                    Linkedin
+                </a>
+                
+            </div>
+        </section>
+        <img class="apresentacao__imagem" src="./assets/foto_2.jpg" alt="Foto da Ariel. Foto teste." height="450" width="450">
+    </main>
+    <footer class="rodape">
+        <p>Desenvolvido por Ariel Sena</p>
+    </footer>
+</body>
+</html>
