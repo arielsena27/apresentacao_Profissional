@@ -11,7 +11,7 @@
 
 ## Feito por:
 ### Ariel Sena
-### Linkedin: www.linkedin.com/in/arielsena27
+### [Linkedin](www.linkedin.com/in/arielsena27)
 
 #### Nota: Primeiro projeto em que me apresento formalmente no mundo da Programação. Desenvolvido com os Cursos do programa Oracle Next Education em parceria com Alura. Este projeto contém comentários em seus códigos que serão retirados posteriormente.
 ´´´
